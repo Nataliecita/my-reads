@@ -15,6 +15,7 @@ class MainPage extends React.Component {
 		}
 	}
 
+	// fetch data
 	componentDidMount(){
 		BooksAPI.getAll()
 			.then(response =>{
@@ -32,9 +33,9 @@ class MainPage extends React.Component {
       		})
   	}
 
+	// Show the books in their respective shelves
 	render(){
 		return (
-			
           <div className="list-books">
             <div className="list-books-title">
               <h1>MyReads</h1>
