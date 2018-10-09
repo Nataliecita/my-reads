@@ -1,8 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
-
 import * as BooksAPI from '../../BooksAPI'
 import Book from '../Book'
 
@@ -10,13 +7,21 @@ import Book from '../Book'
 
 class SearchPage extends React.Component {
   
-  constructor(props){
-    super(props)
-    this.state = {
-      books: [],
-      results: [],
-      query: ""
-    }
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     books: [],
+  //     results: [],
+  //     query: ""
+  //   }
+  // }
+
+// QUESTION: what's the difference between using a constructor like above vs the way I chose to do it?
+
+  state = {
+    books: [],
+    results: [],
+    query: ""
   }
 
   componentDidMount(){

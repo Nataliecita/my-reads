@@ -8,11 +8,8 @@ import Bookshelf from '../Bookshelf'
 
 class MainPage extends React.Component {
 
-	constructor(props){
-		super(props)
-		this.state = {
-			books: []
-		}
+	state = {
+		books: []
 	}
 
 	// fetch data
