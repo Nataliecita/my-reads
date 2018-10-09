@@ -4,10 +4,6 @@ import Book from './Book'
 
 
 class Bookshelf extends React.Component {
-  componentDidMount(){
-    console.log(this)
-  }
-
   render(){
     return (
       <div className="bookshelf">
@@ -15,7 +11,7 @@ class Bookshelf extends React.Component {
           <div className="bookshelf-books">
             <ol className="books-grid">
               {
-                this.props.books.map((book, key) => <Book book={book} key={key} />)
+                this.props.books.map((book, key) => <Book updateBookShelf= {this.props.updateBookShelf}book={book} key={key} />)
               }
             </ol>
           </div>
@@ -25,4 +21,3 @@ class Bookshelf extends React.Component {
 }
 
 export default Bookshelf
-
