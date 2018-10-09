@@ -1,8 +1,5 @@
 import React from 'react'
 
-import * as BooksAPI from '../BooksAPI'
-
-
 class Book extends React.Component {
   render(){
     return (
