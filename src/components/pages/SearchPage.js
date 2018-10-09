@@ -82,7 +82,6 @@ class SearchPage extends React.Component {
           </ol>
         </div>
       </div>
-
 		)
 	}
 }
