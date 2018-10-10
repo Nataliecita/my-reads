@@ -3,7 +3,6 @@ import React from 'react'
 class Book extends React.Component {
   render(){
     return (
-
       <li>
         <div className="book">
           <div className="book-top">

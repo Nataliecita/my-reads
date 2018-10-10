@@ -7,17 +7,6 @@ import Book from '../Book'
 
 class SearchPage extends React.Component {
   
-  // constructor(props){
-  //   super(props)
-  //   this.state = {
-  //     books: [],
-  //     results: [],
-  //     query: ""
-  //   }
-  // }
-
-// QUESTION: what's the difference between using a constructor like above vs the way I chose to do it?
-
   state = {
     books: [],
     results: [],
@@ -32,12 +21,11 @@ class SearchPage extends React.Component {
   }
 
   updateQuery = (query )=> {
-    // this.setState({ query: query.trim() })
     this.setState({ query: query }, this.submitQuery)
   }
 
   submitQuery() {
-    if(this.state.query === "" || this.state.query === "undefinded"){
+    if(this.state.query === "" || this.state.query === "undefined"){
       return this.setState({ results: [] })
     }
     BooksAPI.search(this.state.query.trim()).then( response =>{
